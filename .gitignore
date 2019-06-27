@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+ Project1/.idea/workspace.xml
 
 # C extensions
 *.so

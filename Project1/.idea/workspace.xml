@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ad38808-c8a4-46d0-8db6-b8cf9731e090" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../L1_Exercise_1_Creating_a_Table_with_Postgres.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../L1_Exercise_1_Creating_a_Table_with_Postgres.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etl.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/etl.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_tables.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="756">
@@ -57,11 +57,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/etl.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
     </leaf>
@@ -117,6 +112,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -173,12 +169,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561606715097</updated>
-      <workItem from="1561606717549" duration="2086000" />
+      <workItem from="1561606717549" duration="2319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2086000" />
+    <option name="totallyTimeSpent" value="2319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="23" width="1225" height="1027" extended-state="0" />
@@ -242,6 +238,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/etl.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_tables.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -251,9 +250,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etl.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>
 </project>
