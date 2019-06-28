@@ -1,5 +1,5 @@
 import psycopg2
-from sql_queries import create_table_queries, drop_table_queries
+from sql_queries import create_table_queries, drop_table_queries, insert_table_queries
 
 
 def create_database():
@@ -35,6 +35,7 @@ def create_tables(cur, conn):
 
 
 def main():
+    print(insert_table_queries)
     cur, conn = create_database()
     
     drop_tables(cur, conn)
