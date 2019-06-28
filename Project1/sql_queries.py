@@ -31,7 +31,7 @@ primary key (user_id));
 song_table_create = ("""create table songs(
 song_id varchar(256),
 title varchar(256),
-artist_id int,
+artist_id varchar(256),
 year int,
 duration DECIMAL,
 primary key (song_id));
