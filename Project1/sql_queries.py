@@ -79,7 +79,7 @@ name,
 location,
 latitude,
 longitude
-)values(%s,%s,%s,%s,%s)
+)values(%s,%s,%s,%s,%s);
 """)
 
 time_table_insert = ("""
