@@ -47,7 +47,7 @@ primary key (artist_id));
 """)
 
 time_table_create = ("""create table time(
-start_time timestamp,
+start_time TIMESTAMP,
 hour int,
 day int,
 week int,
@@ -82,7 +82,15 @@ longitude
 )values(%s,%s,%s,%s,%s);
 """)
 
-time_table_insert = ("""
+time_table_insert = ("""insert into time(
+start_time,
+hour,
+day,
+week,
+month,
+year,
+weekday
+)values(%s,%s,%s,%s,%s,%s,%s);
 """)
 
 # FIND SONGS
