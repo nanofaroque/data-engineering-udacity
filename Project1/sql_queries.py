@@ -87,7 +87,9 @@ title,
 artist_id,
 year,
 duration
-)VALUES(%s,%s,%s,%s,%s);
+)VALUES(%s,%s,%s,%s,%s)
+ON CONFLICT (song_id)
+DO NOTHING;;
 """)
 
 artist_table_insert = ("""insert into artists(
@@ -96,7 +98,9 @@ name,
 location,
 latitude,
 longitude
-)values(%s,%s,%s,%s,%s);
+)values(%s,%s,%s,%s,%s)
+ON CONFLICT (artist_id)
+DO NOTHING;;
 """)
 
 time_table_insert = ("""insert into time(

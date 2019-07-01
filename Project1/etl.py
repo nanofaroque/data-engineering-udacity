@@ -5,8 +5,9 @@ import pandas as pd
 from sql_queries import *
 import sys
 
+
 def process_song_file(cur, filepath):
-    print('path of the file: '+filepath)
+    print('path of the file: ' + filepath)
     # open song file
     df = pd.read_json(filepath,lines=True)
     song_data = df[['song_id', 'title', 'artist_id', 'year', 'duration']].values
@@ -26,25 +27,43 @@ def process_song_file(cur, filepath):
     artist_data_to_insert = (artist_data[0], artist_data[1], artist_data[2], artist_data[3], artist_data[4])
     cur.execute(artist_table_insert, artist_data_to_insert)
 
-'''
+
+# filter by NextSong action
+def my_filter_callback_by_next_song(row):
+    return row.page == 'NextSong'
+
+
 def process_log_file(cur, filepath):
     # open log file
-    df = 
+    df = pd.read_json(filepath,lines=True)
+    df_next_song = df[df.apply(my_filter_callback_by_next_song, axis=1)]
 
-    # filter by NextSong action
-    df = 
-
+    df_next_song['date_time'] = (pd.to_datetime(df_next_song['ts'], unit='ms'))
     # convert timestamp column to datetime
-    t = 
-    
+    time_data = [[]]
+    t = df_next_song[['date_time', 'ts']]
+    import time
+    from datetime import datetime
+    for index, row in t.iterrows():
+        data = [datetime.fromtimestamp(t['ts'][index] / 1000).strftime('%Y-%m-%d %H:%M:%S.%f'),
+                int(t['date_time'][index].hour),
+                int(t['date_time'][index].day),
+                int(t['date_time'][index].week),
+                int(t['date_time'][index].month),
+                int(t['date_time'][index].year),
+                int(t['date_time'][index].dayofweek)
+                ]
+        time_data.append(data)
     # insert time data records
-    time_data = 
-    column_labels = 
-    time_df = 
+    time_data = (time_data)
+    column_labels = ('timestamp', 'hour', 'day', 'week', 'month', 'year', 'weekday')
+    time_df = pd.DataFrame(time_data, columns=column_labels)
 
     for i, row in time_df.iterrows():
-        cur.execute(time_table_insert, list(row))
-
+        if i != 0:
+            print(list(row))
+            cur.execute(time_table_insert, list(row))
+'''
     # load user table
     user_df = 
 
@@ -93,8 +112,7 @@ def main():
     cur = conn.cursor()
 
     process_data(cur, conn, filepath='data/song_data', func=process_song_file)
-    # process_data(cur, conn, filepath='data/log_data', func=process_log_file)
-
+    process_data(cur, conn, filepath='data/log_data', func=process_log_file)
     conn.close()
 
 
