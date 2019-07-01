@@ -8,7 +8,7 @@ time_table_drop = "drop table time"
 # CREATE TABLES
 
 songplay_table_create = ("""create table songplays(
-songplay_id int,
+songplay_id serial,
 start_time timestamp(3) with time zone,
 user_id int,
 level varchar(25),
@@ -58,7 +58,16 @@ weekday int);
 
 # INSERT RECORDS
 
-songplay_table_insert = ("""
+songplay_table_insert = ("""insert into songplays(
+start_time,
+user_id,
+level,
+song_id,
+artist_id ,
+session_id,
+location, 
+user_agent
+)values (%s,%s,%s,%s,%s,%s,%s,%s);
 """)
 
 user_table_insert = ("""INSERT INTO users(
@@ -104,6 +113,11 @@ weekday
 # FIND SONGS
 
 song_select = ("""
+SELECT artists.artist_id, songs.song_id
+FROM artists 
+INNER JOIN songs
+ON artists.artist_id= songs.artist_id
+where songs.title=%s and songs.duration=%s
 """)
 
 # QUERY LISTS
