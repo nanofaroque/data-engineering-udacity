@@ -9,7 +9,7 @@ time_table_drop = "drop table time"
 
 songplay_table_create = ("""create table songplays(
 songplay_id int,
-start_time TIMESTAMP,
+start_time timestamp(3) with time zone,
 user_id int,
 level varchar(25),
 song_id varchar(256),
@@ -47,7 +47,7 @@ primary key (artist_id));
 """)
 
 time_table_create = ("""create table time(
-start_time TIMESTAMP,
+start_time timestamp(3) with time zone,
 hour int,
 day int,
 week int,
