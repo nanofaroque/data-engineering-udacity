@@ -61,7 +61,13 @@ weekday int);
 songplay_table_insert = ("""
 """)
 
-user_table_insert = ("""
+user_table_insert = ("""INSERT INTO users(
+user_id,
+first_name,
+last_name,
+gender,
+level
+)VALUES(%s,%s,%s,%s,%s);
 """)
 
 song_table_insert = ("""INSERT INTO songs(
