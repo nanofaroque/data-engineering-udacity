@@ -65,29 +65,33 @@ def process_log_file(cur, filepath):
             cur.execute(time_table_insert, list(row))
 
     # load user table
-    user_df = df[['userId','firstName','lastName','gender','level']]
+    user_df = df[['userId', 'firstName', 'lastName', 'gender', 'level']]
 
     # insert user records
     for i, row in user_df.iterrows():
         cur.execute(user_table_insert, row)
-'''
+
     # insert songplay records
     for index, row in df.iterrows():
-        
-        # get songid and artistid from song and artist tables
-        cur.execute(song_select, (row.song, row.artist, row.length))
+        cur.execute(song_select, (row.song, row.length))
         results = cur.fetchone()
-        
         if results:
             songid, artistid = results
+            # print(songid)
         else:
             songid, artistid = None, None
+            # print(songid)
 
         # insert songplay record
-        songplay_data = 
+        if row.userId == '':
+            userId = 0
+        else:
+            userId = row.userId
+        songplay_data = (datetime.fromtimestamp(row.ts / 1000).strftime('%Y-%m-%d %H:%M:%S.%f'), userId, row.level,
+                         songid, artistid, row.sessionId, row.location, row.userAgent)
         cur.execute(songplay_table_insert, songplay_data)
 
-'''
+
 def process_data(cur, conn, filepath, func):
     # get all files matching extension from directory
     all_files = []
