@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/event_datafile_new.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state>
-              <caret column="60" lean-forward="true" selection-start-column="60" selection-end-column="60" />
+            <state relative-caret-position="42">
+              <caret line="2" column="93" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
             </state>
           </provider>
           <provider editor-type-id="csv-table-editor">
@@ -101,18 +101,17 @@
       <option name="presentableId" value="Default" />
       <updated>1562211789417</updated>
       <workItem from="1562211791777" duration="1979000" />
-      <workItem from="1562227354442" duration="1708000" />
+      <workItem from="1562227354442" duration="1928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3687000" />
+    <option name="totallyTimeSpent" value="3907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="454" y="23" width="1323" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25370803" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25370803" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -126,7 +125,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5019516" side_tool="true" visible="true" weight="0.3297062" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4980484" visible="true" weight="0.3297062" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4980484" visible="true" weight="0.3297062" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49960968" weight="0.3297062" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -153,8 +152,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/event_datafile_new.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="60" lean-forward="true" selection-start-column="60" selection-end-column="60" />
+        <state relative-caret-position="42">
+          <caret line="2" column="93" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
