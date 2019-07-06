@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8321c9ca-2e9f-4f97-b20c-135625324b42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_1B_ Project_Template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Project_1B_ Project_Template.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/event_datafile_new.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="93" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
+            <state relative-caret-position="170">
+              <caret line="4575" column="108" selection-start-line="4575" selection-start-column="105" selection-end-line="4575" selection-end-column="108" />
             </state>
           </provider>
           <provider editor-type-id="csv-table-editor">
@@ -34,6 +35,12 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>faithless</find>
+      <find>182</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -46,7 +53,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="454" />
+    <option name="x" value="357" />
     <option name="y" value="23" />
     <option name="width" value="1323" />
     <option name="height" value="1027" />
@@ -101,15 +108,16 @@
       <option name="presentableId" value="Default" />
       <updated>1562211789417</updated>
       <workItem from="1562211791777" duration="1979000" />
-      <workItem from="1562227354442" duration="1928000" />
+      <workItem from="1562227354442" duration="2484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3907000" />
+    <option name="totallyTimeSpent" value="4463000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="454" y="23" width="1323" height="1027" extended-state="0" />
+    <frame x="357" y="23" width="1323" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25370803" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -152,8 +160,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/event_datafile_new.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="93" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
+        <state relative-caret-position="170">
+          <caret line="4575" column="108" selection-start-line="4575" selection-start-column="105" selection-end-line="4575" selection-end-column="108" />
         </state>
       </provider>
       <provider editor-type-id="csv-table-editor">
