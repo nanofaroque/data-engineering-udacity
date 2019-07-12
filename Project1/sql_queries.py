@@ -16,11 +16,12 @@ song_id varchar(256),
 artist_id varchar(256),
 session_id int,
 location varchar(256), 
-user_agent varchar(256));
+user_agent varchar(256),
+primary key (songplay_id));
 """)
 
 user_table_create = ("""create table users(
-user_id varchar(256),
+user_id varchar(256) not null,
 first_name varchar(40),
 last_name varchar(40),
 gender varchar(10),
@@ -29,7 +30,7 @@ primary key (user_id));
 """)
 
 song_table_create = ("""create table songs(
-song_id varchar(256),
+song_id varchar(256) not null,
 title varchar(256),
 artist_id varchar(256),
 year int,
@@ -38,7 +39,7 @@ primary key (song_id));
 """)
 
 artist_table_create = ("""create table artists(
-artist_id varchar(256),
+artist_id varchar(256) not null ,
 name varchar(256),
 location varchar(256),
 latitude decimal,
