@@ -7,9 +7,20 @@ import sys
 
 
 def process_song_file(cur, filepath):
-    print('path of the file: ' + filepath)
+    """
+    Description: This function can be used to read the file in the filepath (data/song_data)
+    to get the song id, song title, artist, year of the release, and duration
+    populate the song and artist tables.
+
+    Arguments:
+        cur: the cursor object.
+        filepath: song data file path.
+
+    Returns:
+        None
+    """
     # open song file
-    df = pd.read_json(filepath,lines=True)
+    df = pd.read_json(filepath, lines=True)
     song_data = df[['song_id', 'title', 'artist_id', 'year', 'duration']].values
     # insert song record
     song_data = list(song_data[0])
@@ -34,15 +45,25 @@ def my_filter_callback_by_next_song(row):
 
 
 def process_log_file(cur, filepath):
+    """
+    Description: This function can be used to read the file in the filepath (data/log_data)
+    to get the user and time info and used to populate the users and time dim tables.
+
+    Arguments:
+        cur: the cursor object.
+        filepath: log data file path.
+
+    Returns:
+        None
+    """
     # open log file
-    df = pd.read_json(filepath,lines=True)
+    df = pd.read_json(filepath, lines=True)
     df_next_song = df[df.apply(my_filter_callback_by_next_song, axis=1)]
 
     df_next_song['date_time'] = (pd.to_datetime(df_next_song['ts'], unit='ms'))
     # convert timestamp column to datetime
     time_data = [[]]
     t = df_next_song[['date_time', 'ts']]
-    import time
     from datetime import datetime
     for index, row in t.iterrows():
         data = [datetime.fromtimestamp(t['ts'][index] / 1000).strftime('%Y-%m-%d %H:%M:%S.%f'),
@@ -77,17 +98,15 @@ def process_log_file(cur, filepath):
         results = cur.fetchone()
         if results:
             songid, artistid = results
-            # print(songid)
         else:
             songid, artistid = None, None
-            # print(songid)
 
         # insert songplay record
         if row.userId == '':
-            userId = 0
+            user_id = 0
         else:
-            userId = row.userId
-        songplay_data = (datetime.fromtimestamp(row.ts / 1000).strftime('%Y-%m-%d %H:%M:%S.%f'), userId, row.level,
+            user_id = row.userId
+        songplay_data = (datetime.fromtimestamp(row.ts / 1000).strftime('%Y-%m-%d %H:%M:%S.%f'), user_id, row.level,
                          songid, artistid, row.sessionId, row.location, row.userAgent)
         cur.execute(songplay_table_insert, songplay_data)
 
