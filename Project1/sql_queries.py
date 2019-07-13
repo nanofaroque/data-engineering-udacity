@@ -89,7 +89,7 @@ year,
 duration
 )VALUES(%s,%s,%s,%s,%s)
 ON CONFLICT (song_id)
-DO NOTHING;;
+DO NOTHING;
 """)
 
 artist_table_insert = ("""insert into artists(
@@ -100,7 +100,7 @@ latitude,
 longitude
 )values(%s,%s,%s,%s,%s)
 ON CONFLICT (artist_id)
-DO NOTHING;;
+DO NOTHING;
 """)
 
 time_table_insert = ("""insert into time(
@@ -111,7 +111,9 @@ week,
 month,
 year,
 weekday
-)values(%s,%s,%s,%s,%s,%s,%s);
+)values(%s,%s,%s,%s,%s,%s,%s)
+ON CONFLICT (start_time)
+DO NOTHING;
 """)
 
 # FIND SONGS
