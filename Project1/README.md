@@ -24,4 +24,4 @@ python etl.py
 ```
 
 ### Database Schema design
- 
+ ![Image](https://github.com/nanofaroque/data-engineering-udacity/blob/master/Project1/project1.png)
