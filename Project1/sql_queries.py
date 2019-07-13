@@ -54,7 +54,8 @@ day int,
 week int,
 month int,
 year int,
-weekday int);
+weekday int,
+primary key (start_time));
 """)
 
 # INSERT RECORDS

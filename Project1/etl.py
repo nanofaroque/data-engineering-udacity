@@ -99,7 +99,7 @@ def process_log_file(cur, filepath):
         if results:
             songid, artistid = results
         else:
-            songid, artistid = None, None
+            songid, artistid = 0, 0
 
         # insert songplay record
         if row.userId == '':
