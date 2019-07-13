@@ -17,11 +17,13 @@ You can create table by running the script below
 ```
 python create_tables.py
 ```
+### Database Schema design
+ ![Image](https://github.com/nanofaroque/data-engineering-udacity/blob/master/Project1/project1.png)
 
+### ETL process
+* Read the data log data, clean the data and insert into the table.
+* Read the song data, clean it up and insert into the appropriate table.
 #### Run the ETL pipeline
 ```.env
 python etl.py
 ```
-
-### Database Schema design
- ![Image](https://github.com/nanofaroque/data-engineering-udacity/blob/master/Project1/project1.png)
