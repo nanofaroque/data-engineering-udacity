@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project_1B_ Project_Template.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
@@ -38,7 +38,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="357" />
+    <option name="x" value="402" />
     <option name="y" value="23" />
     <option name="width" value="1323" />
     <option name="height" value="1027" />
@@ -94,18 +94,19 @@
       <updated>1562211789417</updated>
       <workItem from="1562211791777" duration="1979000" />
       <workItem from="1562227354442" duration="2733000" />
-      <workItem from="1563060568223" duration="1921000" />
+      <workItem from="1563060568223" duration="2249000" />
+      <workItem from="1563141004050" duration="87000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6633000" />
+    <option name="totallyTimeSpent" value="7048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="357" y="23" width="1323" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25761124" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26151446" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -119,7 +120,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5027322" side_tool="true" weight="0.3297062" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49726775" visible="true" weight="0.3297062" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49726775" visible="true" weight="0.3297062" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49960968" weight="0.3297062" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -134,21 +135,21 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/event_datafile_new.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="254">
-          <caret line="4579" column="104" selection-start-line="4579" selection-start-column="104" selection-end-line="4579" selection-end-column="104" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event_datafile_new.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="93" selection-start-line="4" selection-start-column="93" selection-end-line="4" selection-end-column="93" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project_1B_ Project_Template.ipynb">
