@@ -55,10 +55,10 @@ year integer
 
 songplay_table_create = ("""create table if not exists songplays
 (songplay_id integer IDENTITY(0,1) PRIMARY KEY,
-start_time timestamp REFERENCES time(start_time) sortkey,
+start_time timestamp REFERENCES time(start_time),
 user_id text NOT NULL REFERENCES users(user_id),
 level text,
-song_id text REFERENCES songs(song_id) distkey,
+song_id text REFERENCES songs(song_id) ,
 artist_id text REFERENCES artists(artist_id),
 session_id text,
 location text,
@@ -125,7 +125,27 @@ json 'auto';
 
 # FINAL TABLES
 
-songplay_table_insert = ("""
+songplay_table_insert = ("""insert into songplays(
+start_time, 
+user_id,
+level, 
+song_id, 
+artist_id, 
+session_id, 
+location, 
+user_agent)
+SELECT DISTINCT TIMESTAMP 
+'epoch' + start_time/1000 *INTERVAL '1 second' as start_time,
+e.user_id,
+e.level,
+s.song_id,
+s.artist_id,
+e.session_id,
+e.location,
+e.user_agent
+FROM staging_events e, staging_songs s
+WHERE e.page = 'NextSong'
+AND e.song = s.title
 """)
 
 user_table_insert = ("""
