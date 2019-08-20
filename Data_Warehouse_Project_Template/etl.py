@@ -22,7 +22,8 @@ def main():
     config.read('dwh.cfg')
 
     print('Connecting to redshift')
-    conn = psycopg2.connect("host={} dbname={} user={} password={} port={}".format(*config['CLUSTER'].values()))
+    conn = psycopg2.connect("host={} dbname={} user={} password={} port={}"
+                            .format(*config['CLUSTER'].values()))
     print('Connected to redshift')
     cur = conn.cursor()
 
@@ -30,7 +31,6 @@ def main():
 
     print('Transform from staging')
     insert_tables(cur, conn)
-
     conn.close()
     print('ETL Ended')
 
