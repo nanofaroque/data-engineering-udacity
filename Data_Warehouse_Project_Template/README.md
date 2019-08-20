@@ -15,6 +15,8 @@ Load - For loading phase, we will keep inside the redshift but in real world you
 
 Here is how it looks like: 
 
+![](https://github.com/nanofaroque/data-engineering-udacity/blob/master/Data_Warehouse_Project_Template/desing_screen.png)
+
 ### Project structure details
 * All the sql query reside inside the ```sql_queries.py``` file
 * For creating the table, we have to run ```create_tables.py``` file
