@@ -14,6 +14,7 @@ Transform - We will clean up the data by finding valuable column
 Load - For loading phase, we will keep inside the redshift but in real world you can store any storage or S3
 
 Here is how it looks like: 
+![](https://github.com/nanofaroque/data-engineering-udacity/blob/master/Data_Warehouse_Project_Template/desing_screen.png)
 
 ### Project structure details
 * All the sql query reside inside the ```sql_queries.py``` file
