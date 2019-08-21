@@ -180,7 +180,6 @@ EXTRACT(weekday from start_time) AS weekday
 FROM (SELECT DISTINCT
 TIMESTAMP 'epoch' + ts/1000 *INTERVAL '1 second' as
 start_time FROM staging_events s)
-WHERE start_time NOT IN (SELECT DISTINCT start_time FROM time)
 """)
 
 create_table_queries = [staging_events_table_create,
