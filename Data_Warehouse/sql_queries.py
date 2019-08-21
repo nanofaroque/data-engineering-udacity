@@ -60,7 +60,7 @@ user_agent TEXT)
 """)
 
 user_table_create = ("""CREATE TABLE users(
-user_id INTEGER primary key,
+user_id INTEGER not null primary key,
 first_name VARCHAR(255),
 last_name VARCHAR(255),
 gender VARCHAR(1),
@@ -68,7 +68,7 @@ level VARCHAR(50))
 """)
 
 song_table_create = ("""CREATE TABLE songs(
-song_id VARCHAR(100) primary key,
+song_id VARCHAR(100) not null primary key,
 title VARCHAR(255),
 artist_id VARCHAR(100) NOT NULL,
 year INTEGER,
@@ -77,7 +77,7 @@ PRIMARY KEY (song_id))
 """)
 
 artist_table_create = ("""CREATE TABLE artists(
-artist_id VARCHAR(100) primary key,
+artist_id VARCHAR(100) not null primary key,
 name VARCHAR(255),
 location VARCHAR(255),
 latitude DOUBLE PRECISION,
@@ -85,7 +85,7 @@ longitude DOUBLE PRECISION)
 """)
 
 time_table_create = ("""CREATE TABLE time(
-start_time TIMESTAMP primary key,
+start_time TIMESTAMP not null primary key,
 hour INTEGER,
 day INTEGER,
 week INTEGER,
