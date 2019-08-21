@@ -141,7 +141,6 @@ user_gender,
 user_level
 FROM staging_events
 WHERE page = 'NextSong'
-AND user_id NOT IN (SELECT DISTINCT user_id FROM users)
 """)
 
 song_table_insert = ("""INSERT INTO
