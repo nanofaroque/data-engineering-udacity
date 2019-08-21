@@ -28,9 +28,9 @@ registration VARCHAR(50),
 session_id BIGINT,
 song_title VARCHAR(255),
 status INTEGER,
-ts VARCHAR(50),
+ts bigint,
 user_agent TEXT,
-user_id VARCHAR(100),
+user_id integer,
 PRIMARY KEY (event_id))
 """)
 
@@ -50,7 +50,7 @@ year INTEGER)
 songplay_table_create = ("""CREATE TABLE if not exists songplays(
 songplay_id INT IDENTITY(0,1) primary key,
 start_time TIMESTAMP REFERENCES time(start_time),
-user_id VARCHAR(50) REFERENCES users(user_id),
+user_id INTEGER REFERENCES users(user_id),
 level VARCHAR(50),
 song_id VARCHAR(100) REFERENCES songs(song_id),
 artist_id VARCHAR(100) REFERENCES artists(artist_id),
@@ -60,7 +60,7 @@ user_agent TEXT)
 """)
 
 user_table_create = ("""CREATE TABLE users(
-user_id VARCHAR primary key,
+user_id INTEGER primary key,
 first_name VARCHAR(255),
 last_name VARCHAR(255),
 gender VARCHAR(1),
