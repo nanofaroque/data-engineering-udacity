@@ -23,18 +23,20 @@ def create_spark_session():
 
 def process_song_data(spark, input_data, output_data):
     # get filepath to song data file
-    song_data = "./data/song_data/A/*/*"
+    song_data = input_data + "./data/song_data/A/*/*"
     
     # read song data file
     df = spark.read.json(song_data)
-    print(df.count())
+    print('Number of data: '+ str(df.count()))
 
     # extract columns to create songs table
-    songs_table = df.describe()
-    print(songs_table)
-    '''
+    songs_table = df.select('song_id', 'title', 'artist_id',
+                            'year', 'duration').dropDuplicates()
+    print(songs_table.describe())
+
     # write songs table to parquet files partitioned by year and artist
-    songs_table
+    songs_table.write.parquet(f'./output_data',mode='overwrite',partitionBy=['year','artist_id'])
+    '''
 
     # extract columns to create artists table
     artists_table = 
@@ -86,7 +88,8 @@ def process_log_data(spark, input_data, output_data):
 
 def main():
     spark = create_spark_session()
-    input_data = "s3a://udacity-dend/"
+    #input_data = "s3a://udacity-dend/"
+    input_data=""
     output_data = ""
     
     process_song_data(spark, input_data, output_data)    
