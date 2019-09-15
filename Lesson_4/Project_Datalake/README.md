@@ -26,3 +26,9 @@ Data from the log_data:
 ### Star Schema
 We are reading those json file and creating star schema like below
 <img src="https://github.com/nanofaroque/data-engineering-udacity/blob/master/Lesson_4/Project_Datalake/schema.png" width="100%">
+
+### What we did in the Project?
+1. Read the json file and create data frame
+2. filter out those data based on the schema
+3. Save it parquet file
+4. Serve the high performance analytics query
