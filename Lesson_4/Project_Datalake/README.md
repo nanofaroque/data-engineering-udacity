@@ -10,5 +10,5 @@ types of analytics—from dashboards and visualizations to big data
 processing, real-time analytics, and machine learning to guide better 
 decisions.
  
-<img src="./data_lake.png.png" width="50%"/>
+<img src="https://github.com/nanofaroque/data-engineering-udacity/blob/master/Lesson_4/Project_Datalake/data_lake.png" width="100%"/>
  
