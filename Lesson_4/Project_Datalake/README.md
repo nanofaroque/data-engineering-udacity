@@ -25,3 +25,4 @@ Data from the log_data:
 
 ### Star Schema
 We are reading those json file and creating star schema like below
+<img src="https://github.com/nanofaroque/data-engineering-udacity/blob/master/Lesson_4/Project_Datalake/schema.png" width="100%">
