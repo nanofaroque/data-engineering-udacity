@@ -16,6 +16,10 @@ os.environ['AWS_SECRET_ACCESS_KEY'] = config['AWS_SECRET_ACCESS_KEY']
 
 
 def create_spark_session():
+    """
+    creating SparkSession
+    :return:
+    """
     spark = SparkSession \
         .builder \
         .config("spark.jars.packages", "org.apache.hadoop:hadoop-aws:2.7.0") \
@@ -24,6 +28,13 @@ def create_spark_session():
 
 
 def process_song_data(spark, input_data, output_data):
+    """
+    Process song data
+    :param spark: SparkSession
+    :param input_data: Song data directory
+    :param output_data: Output directory to store as parquet
+    :return: None
+    """
     # get filepath to song data file
     song_data = input_data + "./data/song_data/A/*/*"
 
@@ -51,6 +62,13 @@ def process_song_data(spark, input_data, output_data):
 
 
 def process_log_data(spark, input_data, output_data):
+    """
+    Process the log data from the log directory
+    :param spark: SparkSession
+    :param input_data: Input data directory
+    :param output_data: output data directory
+    :return: None
+    """
     # get filepath to log data file
     log_data = input_data + './data/log_data/*.json'
 
@@ -123,6 +141,10 @@ def process_log_data(spark, input_data, output_data):
 
 
 def main():
+    """
+    This is the main function to start the ETL process
+    :return: None
+    """
     spark = create_spark_session()
     input_data = "s3a://udacity-dend"
     output_data = "s3a://sparkify-bucket"
